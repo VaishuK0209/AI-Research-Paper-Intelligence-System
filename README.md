@@ -1,87 +1,138 @@
+<div align="center">
+
 # 🔍 Semantic Research Paper Search Engine
 
-A semantic search engine for research papers built using **Sentence Transformers** and **FAISS**. Unlike traditional keyword-based search, this project understands the meaning of a user's query and retrieves the most relevant research papers based on semantic similarity.
+### AI-powered Semantic Search for Research Papers using Sentence Transformers & FAISS
 
-## 📌 Project Overview
+<p>
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/NLP-Semantic%20Search-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/FAISS-Vector%20Search-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-red?style=for-the-badge" />
+</p>
 
-This project uses a pretrained transformer model to convert research paper abstracts into dense vector embeddings. These embeddings are indexed using FAISS, enabling fast and efficient similarity search over thousands of research papers.
+*A semantic search engine that understands the **meaning** of your query—not just the keywords.*
 
-The system allows users to search for research papers using natural language queries, making it easier to discover relevant literature even when exact keywords are not present.
-
----
-
-## 🚀 Features
-
-* Semantic search using natural language queries
-* Fast similarity search powered by FAISS
-* High-quality sentence embeddings using Sentence Transformers
-* Data preprocessing and exploratory data analysis (EDA)
-* Efficient embedding storage and loading
-* Scalable architecture for large research paper datasets
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+## 📖 About the Project
 
-* Python
-* Jupyter Notebook
-* Pandas
-* NumPy
-* Sentence Transformers
-* FAISS
-* Scikit-learn
-* Matplotlib
-* Seaborn
+Finding relevant research papers through traditional keyword search can be challenging because different papers often describe the same concept using different terminology.
+
+This project solves that problem by implementing a **Semantic Research Paper Search Engine** powered by **Natural Language Processing (NLP)** and **Transformer-based sentence embeddings**.
+
+Instead of matching exact words, the system understands the **context and semantic meaning** of a user's query, allowing it to retrieve the most relevant research papers—even when the query and the paper use different vocabulary.
+
+The project was developed as part of the **CBSOT Summer Internship 2026** to explore modern Information Retrieval techniques using state-of-the-art NLP models.
 
 ---
 
-## 📂 Project Structure
+# ✨ Key Features
 
+* 🔍 Context-aware semantic search
+* 🤖 Transformer-based text embeddings
+* ⚡ Ultra-fast similarity search with FAISS
+* 📚 Research paper retrieval using Natural Language queries
+* 📊 Data preprocessing and exploratory data analysis
+* 💾 Efficient embedding storage for faster searches
+* 📈 Scalable architecture for large document collections
+* 🧠 Uses pretrained Sentence Transformer models
+
+---
+
+# 🛠️ Tech Stack
+
+| Category             | Technologies                 |
+| -------------------- | ---------------------------- |
+| Programming Language | Python                       |
+| NLP                  | Sentence Transformers        |
+| Vector Search        | FAISS                        |
+| Data Processing      | Pandas, NumPy                |
+| Machine Learning     | Scikit-learn                 |
+| Visualization        | Matplotlib, Seaborn          |
+| Environment          | Jupyter Notebook             |
+| Dataset              | Hugging Face ML-ArXiv Papers |
+
+---
+
+# 📂 Project Structure
+
+```text
+Semantic-Research-Paper-Search/
+│
+├── EDA.ipynb
+├── Search_Engine.ipynb
+├── dataset.md
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
-├── EDA.ipynb              # Data preprocessing and embedding generation
-├── Search_Engine.ipynb    # Semantic search implementation using FAISS
-├── dataset.md             # Dataset information
+
+---
+
+# ⚙️ Workflow
+
+```text
+Research Paper Dataset
+          │
+          ▼
+Data Cleaning & Preprocessing
+          │
+          ▼
+Sentence Transformer
+(all-MiniLM-L6-v2)
+          │
+          ▼
+Generate Vector Embeddings
+          │
+          ▼
+Store Embeddings
+          │
+          ▼
+Build FAISS Index
+          │
+          ▼
+User Natural Language Query
+          │
+          ▼
+Convert Query to Embedding
+          │
+          ▼
+Similarity Search
+          │
+          ▼
+Top Relevant Research Papers
 ```
 
 ---
 
-## 📊 Dataset
+# 📊 Dataset
 
-This project uses the **ML-ArXiv-Papers** dataset available on Hugging Face.
+This project uses the **ML-ArXiv-Papers** dataset available on **Hugging Face**.
 
-The dataset contains research papers with information such as:
+The dataset contains thousands of Machine Learning research papers, including:
 
-* Title
+* Research Paper Title
 * Abstract
-* Categories
 * Authors
+* Categories
 
-Dataset information is provided in `dataset.md`.
-
----
-
-## ⚙️ How It Works
-
-1. Load the research paper dataset.
-2. Clean and preprocess the data.
-3. Generate sentence embeddings using the pretrained `all-MiniLM-L6-v2` model.
-4. Store embeddings for efficient reuse.
-5. Build a FAISS index from the embeddings.
-6. Accept a natural language query from the user.
-7. Retrieve the most semantically similar research papers.
+The complete dataset reference is available in **dataset.md**.
 
 ---
 
-## ▶️ Installation
+# 🚀 Installation
 
-Clone the repository:
+### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/semantic-search-engine.git
-cd semantic-search-engine
+git clone https://github.com/your-username/semantic-research-paper-search.git
+cd semantic-research-paper-search
 ```
 
-Install dependencies:
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -89,49 +140,136 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Usage
+# ▶️ Running the Project
 
-1. Open `EDA.ipynb`.
-2. Run all cells to preprocess the dataset and generate embeddings.
-3. Open `Search_Engine.ipynb`.
-4. Run the notebook.
-5. Enter a search query to retrieve the most relevant research papers.
+### Step 1 — Generate Embeddings
 
----
+Run
 
-## 📈 Future Improvements
+```text
+EDA.ipynb
+```
 
-* Web interface using Streamlit or Flask
-* PDF viewer integration
-* Hybrid keyword + semantic search
-* Query autocomplete
-* Research paper recommendation system
-* Support for multiple datasets
-* Docker deployment
+This notebook:
+
+* Loads the dataset
+* Cleans the data
+* Performs Exploratory Data Analysis
+* Generates semantic embeddings
 
 ---
 
-## 📚 Learning Outcomes
+### Step 2 — Search Papers
 
-Through this project, I gained hands-on experience with:
+Run
+
+```text
+Search_Engine.ipynb
+```
+
+This notebook:
+
+* Loads saved embeddings
+* Creates (or loads) the FAISS index
+* Accepts a natural language query
+* Returns the most semantically similar research papers
+
+---
+
+# 💡 Example
+
+### User Query
+
+```text
+Deep learning techniques for image classification
+```
+
+### Output
+
+✔ Most Relevant Research Papers
+
+✔ Similarity Scores
+
+✔ Paper Titles
+
+✔ Research Abstracts
+
+---
+
+# 🧠 How Semantic Search Works
+
+Unlike traditional keyword search:
+
+❌ Keyword Search
+
+* Matches exact words
+* Misses related concepts
+* Sensitive to wording
+
+✅ Semantic Search
+
+* Understands context
+* Finds conceptually similar papers
+* Uses dense vector embeddings
+* Produces more meaningful search results
+
+---
+
+# 📚 What I Learned
+
+Through this project I gained practical experience with:
 
 * Natural Language Processing (NLP)
 * Semantic Search
-* Vector Embeddings
 * Transformer Models
+* Sentence Embeddings
+* Vector Databases
 * FAISS Indexing
+* Information Retrieval
 * Research Paper Retrieval Systems
 * Data Preprocessing
-* Exploratory Data Analysis (EDA)
+* Exploratory Data Analysis
 
 ---
 
-## 🤝 Contributing
+# 🎯 Future Enhancements
 
-Contributions, suggestions, and improvements are welcome. Feel free to fork the repository and submit a pull request.
+* 🌐 Streamlit Web Application
+* 📄 PDF Upload & Search
+* 🤖 Research Paper Recommendation System
+* 🔍 Hybrid Keyword + Semantic Search
+* 📊 Interactive Search Dashboard
+* 🐳 Docker Support
+* ☁ Cloud Deployment
+* 🔌 REST API Integration
 
 ---
 
-## 📄 License
+# 🤝 Contributing
 
-This project is intended for educational and learning purposes.
+Contributions are always welcome!
+
+If you have ideas to improve this project, feel free to:
+
+* Fork the repository
+* Create a new branch
+* Submit a Pull Request
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
+
+It helps support the project and motivates future improvements.
+
+---
+
+# 👨‍💻 Author
+
+**Rohit Kumar Sharma**
+
+Developed during the **CBSOT Summer Internship 2026**.
+
+Let's connect and collaborate on **AI**, **Machine Learning**, **NLP**, and **Open Source** projects!
+
