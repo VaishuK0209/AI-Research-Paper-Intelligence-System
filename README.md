@@ -267,7 +267,7 @@ It helps support the project and motivates future improvements.
 
 # 👨‍💻 Author
 
-**Rohit Kumar Sharma**
+**Vaishnavi Kushwah**
 
 Developed during the **CBSOT Summer Internship 2026**.
 
